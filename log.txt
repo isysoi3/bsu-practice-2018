@@ -1,0 +1,29 @@
+commit a3937fe538c3a6c5987ee45f7b505edc66f8483c
+Author: isysoi3 <14ilya12322@gmail.com>
+Date:   Tue Feb 6 11:38:25 2018 +0300
+
+    remove test.java file
+
+commit 0180c6966e32df3f0bec89f9efdcd917246d0b99
+Author: Ilya Sysoi <14ilya12322@gmail.com>
+Date:   Tue Feb 6 11:04:12 2018 +0300
+
+    move status.txt to task 1 folder
+
+commit 15a5fee57fdce23033de02517821c1cbb3de25d5
+Author: Ilya Sysoi <14ilya12322@gmail.com>
+Date:   Tue Feb 6 11:03:11 2018 +0300
+
+    add test file
+
+commit ca45bc88e57adeb25babd0531b4f6db65a6a28cc
+Author: Ilya Sysoi <14ilya12322@gmail.com>
+Date:   Tue Feb 6 11:02:29 2018 +0300
+
+    update .gitignore
+
+commit 332b0fea75a94da78307cb1a9330db31eb95ddd2
+Author: Ilya Sysoi <14ilya12322@gmail.com>
+Date:   Tue Feb 6 10:47:20 2018 +0300
+
+    Initial commit
