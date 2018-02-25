@@ -44,20 +44,15 @@ footer {
     font-size:18px;
     line-height:1.5em;
     text-align:center;
+    letter-spacing:0.01em;
+    font-family: georgia,palatino,book antiqua,eb garamond,serif;
+    font-style:italic;
 }
 
 .font_2 {
     font-size:51px;
     text-shadow:#ffffff 3px 3px 0, rgba(0, 0, 0, 0.2) 6px 6px 0;
     font-family:lobster,cursive;
-}
-
-.footerTextStyle {
-    font-family: georgia,palatino,book antiqua,eb garamond,serif;
-}
-
-.footerLogoTextStyle {
-    font-family: lobster, cursive;
 }
 
 .logo {
@@ -76,9 +71,8 @@ footer {
     border-radius: 10px;
 }
 
-
 .button:hover {
-    background: #91D3F8; /* Цвет фона */
+    background: #91D3F8;
 }
 
 .user {
