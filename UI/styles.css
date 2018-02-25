@@ -12,8 +12,6 @@ html, body {
     background-color: #ABB59E;
 }
 
-
-
 header {
     width: 100%;
     height: 200px;
@@ -21,7 +19,7 @@ header {
 
 .content {
     width: 75%;
-    height: 1000px;
+    height: max-content;
     background: white;
     left: 12%;
     position: relative;
@@ -95,4 +93,38 @@ footer {
     left: 150px;
     top: -70px;
     position: relative;
+}
+
+.Post {
+    height: max-content ;
+    padding-bottom: 70px;
+}
+
+.photoPost {
+    top: 40px;
+    left: 40px;
+    position: relative;
+
+}
+
+.description {
+    top: 40px;
+    left: 40px;
+    position: relative;
+}
+
+.border {
+    position: relative;
+    top: 65px;
+    height: 1px;
+    width: 90%;
+    left: 40px;
+    background: gray;
+}
+
+.editButton {
+    position: relative;
+    top: -200px;
+    left: 30%;
+    background-color: white;
 }
