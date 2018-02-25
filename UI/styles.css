@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.syte {
+    background-color: #ABB59E;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+header {
+    width: 100%;
+    height: 100px;
+}
+
+.content {
+    width: 75%;
+    height: 1000px;
+    background: white;
+    left: 12%;
+    position: relative;
+}
+
+footer {
+    width: 100%;
+    height: 250px;
+    bottom: 0;
+}
+
+.info{
+    position : absolute;
+    width    : auto;
+    height   :  auto;
+    left     : 50%;
+    margin-left : -100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.font_8 {
+    font-size:18px;
+    line-height:1.5em;
+    text-align:center;
+}
+
+.footerTextStyle {
+    font-family: georgia,palatino,book antiqua,eb garamond,serif;
+}
+
+.footerLogoTextStyle {
+    font-family: lobster, cursive;
+}
