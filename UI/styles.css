@@ -130,3 +130,10 @@ footer {
     width: max-content;
     background-color: white;
 }
+
+.showme{
+    display: none;
+}
+.showhim:hover .showme{
+    display : block;
+}
