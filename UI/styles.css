@@ -119,8 +119,7 @@ footer {
     position: relative;
     top: 7vh;
     height: 1px;
-    width: 90%;
-    left: 7vh;
+    width: 100%;
     background: gray;
 }
 
