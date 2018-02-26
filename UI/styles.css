@@ -24,10 +24,10 @@ footer {
 }
 
 .content {
-    width: 70%;
+    width: 50%;
     height: max-content;
     background: white;
-    left: 12%;
+    left: 25%;
     position: relative;
 }
 
@@ -59,7 +59,7 @@ footer {
 }
 
 .logo {
-    left: 12%;
+    left: 25%;
     top: 5vh;
     position: relative;
 }
@@ -79,7 +79,7 @@ footer {
 }
 
 .user {
-    left: 70%;
+    left: 65%;
     top: -70px;
     position: relative;
 }
