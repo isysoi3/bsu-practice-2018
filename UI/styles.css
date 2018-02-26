@@ -103,7 +103,7 @@ footer {
 }
 
 .photoPost {
-    top: 4vh;
+    top: 2vh;
     left: 4vh;
     position: relative;
 
@@ -126,7 +126,7 @@ footer {
 .editButton {
     position: relative;
     left: 80%;
-    top: 10%;
+    top: 5%;
     width: max-content;
     background-color: white;
 }
