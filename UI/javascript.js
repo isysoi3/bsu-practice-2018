@@ -79,7 +79,7 @@ Date.prototype.yyyymmdd = function () {
         },
 
         addPhotoPost: function (photoPost) {
-            if (validatePhotoPost(photoPost)) {
+            if (this.validatePhotoPost(photoPost)) {
                 photoPost.id = photoPosts.length;
                 photoPosts.push(photoPost);
                 return true;
@@ -88,7 +88,7 @@ Date.prototype.yyyymmdd = function () {
         },
 
         findIndexOfPhotoPost: function (id) {
-            for (var i = 0; i < posts.length; i++) {
+            for (var i = 0; i < photoPosts.length; i++) {
                 if (photoPosts[i].id === id)
                     return i;
             }
@@ -96,13 +96,13 @@ Date.prototype.yyyymmdd = function () {
         },
 
         editPhotoPost: function (id, photoPost) {
-            var post = getPhotoPost(id);
+            var post = this.getPhotoPost(id);
             if (post != null) {
                 if (photoPost.photoLink !== undefined)
                     post.photoLink = photoPost.photoLink;
                 if (photoPost.description !== undefined)
                     post.description = photoPost.description;
-                if (validatePhotoPost(photoPost)) {
+                if (this.validatePhotoPost(photoPost)) {
                     return true;
                 }
             }
@@ -110,8 +110,8 @@ Date.prototype.yyyymmdd = function () {
         },
 
         removePhotoPost: function (id) {
-            if (getPhotoPost(id)) {
-                var index = findIndexOfPhotoPost(id);
+            if (this.getPhotoPost(id)) {
+                var index = this.findIndexOfPhotoPost(id);
                 if (index !== -1) {
                     photoPosts.splice(index, 1);
                     return true;
