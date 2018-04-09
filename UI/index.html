@@ -2,268 +2,143 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>PhotoBoom</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+    <script src="javascript.js"></script>
 <body>
-    <div class="site_background">
+</head>
+<div class="site_background">
 
-        <header>
-            <div class="logo">
-                <h2 class="infoFont">
-                    PhotoBoom
-                </h2>
-                <button class="button" style="top: 10px">
-                    Добавить фото
-                </button>
-            </div>
-
-            <div class="user">
-                <p class="username">isysoi</p>
-                <img class="userPhoto" src="assets/profileImage.png" height="81" width="81"/>
-                <button class="button" style="left: -40px; top: -30px">
-                    Выйти
-                </button>
-            </div>
-        </header>
-
-        <div class="filter">
-            <button class="button" style="left: 76%; position: absolute">
-                Поиск
+    <header>
+        <div class="logo">
+            <h2 class="infoFont">
+                PhotoBoom
+            </h2>
+            <button class="button" style="top: 10px">
+                Добавить фото
             </button>
-            <div class="showhim">
-                <button class="button" style="left: 76%;top: 30%; position: absolute">
-                    Фильтры
-                </button>
-                <div class="showme" style="left: 84%;top: 30%; position: absolute">
-                    <dl>
-                        <dt>
-                            <button class="button" >
-                                Тег2
-                            </button></dt>
-                        <dt>
-                            <button class="button" >
-                                Тег1
-                            </button>
-                        </dt>
-                        <dt>
-                            <button class="button" >
-                                Тег3
-                            </button>
-                        </dt>
-                        <!-- добавьте пункты сюда -->
-                    </dl>
-                </div>
-            </div>
         </div>
 
+        <div class="user"></div>
+    </header>
 
-        <div class="content">
-
-
-            <div class="Post">
-                <div class="editButton">
-                    <button > <img src="assets/pencil-edit-button.png" height="32px" width="32px"/>  </button>
-                </div>
-                <img class="photoPost" src="assets/photo1.png" height="80%" width="60%"/>
-                <div class="description">
-                    <p>isysoi</p>
-                    <p>February 16, 2018 14:50</p>
-                    <p>Неоценимая польза серфинга — искусство быть счастливым !</p>
-                    <p>#серфинг#счастье#2018#плавание#океан#ожидание#волны</p>
-                </div>
-                <button class="button" style="top: 50px; left: 40px;">Like 54</button>
-                <button class="button" style="top: 50px; left: 50%">Удалить</button>
-                <div class="border"></div>
+    <div class="filter">
+        <button class="button" style="left: 76%; position: absolute">
+            Поиск
+        </button>
+        <div class="showhim">
+            <button class="button" style="left: 76%;top: 30%; position: absolute">
+                Фильтры
+            </button>
+            <div class="showme" style="left: 84%;top: 30%; position: absolute">
+                <dl>
+                    <dt>
+                        <button class="button">
+                            Тег2
+                        </button>
+                    </dt>
+                    <dt>
+                        <button class="button">
+                            Тег1
+                        </button>
+                    </dt>
+                    <dt>
+                        <button class="button">
+                            Тег3
+                        </button>
+                    </dt>
+                    <!-- добавьте пункты сюда -->
+                </dl>
             </div>
-
-            <div class="Post">
-                <div class="editButton">
-                    <button > <img src="assets/pencil-edit-button.png" height="32px" width="32px"/>  </button>
-                </div>
-                <img class="photoPost" src="assets/photo1.png" height="80%" width="60%"/>
-                <div class="description">
-                    <p>isysoi</p>
-                    <p>February 16, 2018 14:50</p>
-                    <p>Неоценимая польза серфинга — искусство быть счастливым !</p>
-                    <p>#серфинг#счастье#2018#плавание#океан#ожидание#волны</p>
-                </div>
-                <button class="button" style="top: 50px; left: 40px;">Like 54</button>
-                <button class="button" style="top: 50px; left: 50%">Удалить</button>
-                <div class="border"></div>
-            </div>
-
-            <div class="Post">
-                <div class="editButton">
-                    <button > <img src="assets/pencil-edit-button.png" height="32px" width="32px"/>  </button>
-                </div>
-                <img class="photoPost" src="assets/photo1.png" height="80%" width="60%"/>
-                <div class="description">
-                    <p>isysoi</p>
-                    <p>February 16, 2018 14:50</p>
-                    <p>Неоценимая польза серфинга — искусство быть счастливым !</p>
-                    <p>#серфинг#счастье#2018#плавание#океан#ожидание#волны</p>
-                </div>
-                <button class="button" style="top: 50px; left: 40px;">Like 54</button>
-                <button class="button" style="top: 50px; left: 50%">Удалить</button>
-                <div class="border"></div>
-            </div>
-
-            <div class="Post">
-                <div class="editButton">
-                    <button > <img src="assets/pencil-edit-button.png" height="32px" width="32px"/>  </button>
-                </div>
-                <img class="photoPost" src="assets/photo1.png" height="80%" width="60%"/>
-                <div class="description">
-                    <p>isysoi</p>
-                    <p>February 16, 2018 14:50</p>
-                    <p>Неоценимая польза серфинга — искусство быть счастливым !</p>
-                    <p>#серфинг#счастье#2018#плавание#океан#ожидание#волны</p>
-                </div>
-                <button class="button" style="top: 50px; left: 40px;">Like 54</button>
-                <button class="button" style="top: 50px; left: 50%">Удалить</button>
-                <div class="border"></div>
-            </div>
-
-            <div class="Post">
-                <div class="editButton">
-                    <button > <img src="assets/pencil-edit-button.png" height="32px" width="32px"/>  </button>
-                </div>
-                <img class="photoPost" src="assets/photo1.png" height="80%" width="60%"/>
-                <div class="description">
-                    <p>isysoi</p>
-                    <p>February 16, 2018 14:50</p>
-                    <p>Неоценимая польза серфинга — искусство быть счастливым !</p>
-                    <p>#серфинг#счастье#2018#плавание#океан#ожидание#волны</p>
-                </div>
-                <button class="button" style="top: 50px; left: 40px;">Like 54</button>
-                <button class="button" style="top: 50px; left: 50%">Удалить</button>
-                <div class="border"></div>
-            </div>
-
-            <div class="Post">
-                <div class="editButton">
-                    <button > <img src="assets/pencil-edit-button.png" height="32px" width="32px"/>  </button>
-                </div>
-                <img class="photoPost" src="assets/photo1.png" height="80%" width="60%"/>
-                <div class="description">
-                    <p>isysoi</p>
-                    <p>February 16, 2018 14:50</p>
-                    <p>Неоценимая польза серфинга — искусство быть счастливым !</p>
-                    <p>#серфинг#счастье#2018#плавание#океан#ожидание#волны</p>
-                </div>
-                <button class="button" style="top: 50px; left: 40px;">Like 54</button>
-                <button class="button" style="top: 50px; left: 50%">Удалить</button>
-                <div class="border"></div>
-            </div>
-
-            <div class="Post">
-                <div class="editButton">
-                    <button > <img src="assets/pencil-edit-button.png" height="32px" width="32px"/>  </button>
-                </div>
-                <img class="photoPost" src="assets/photo1.png" height="80%" width="60%"/>
-                <div class="description">
-                    <p>isysoi</p>
-                    <p>February 16, 2018 14:50</p>
-                    <p>Неоценимая польза серфинга — искусство быть счастливым !</p>
-                    <p>#серфинг#счастье#2018#плавание#океан#ожидание#волны</p>
-                </div>
-                <button class="button" style="top: 50px; left: 40px;">Like 54</button>
-                <button class="button" style="top: 50px; left: 50%">Удалить</button>
-                <div class="border"></div>
-            </div>
-
-            <div class="Post">
-                <div class="editButton">
-                    <button > <img src="assets/pencil-edit-button.png" height="32px" width="32px"/>  </button>
-                </div>
-                <img class="photoPost" src="assets/photo1.png" height="80%" width="60%"/>
-                <div class="description">
-                    <p>isysoi</p>
-                    <p>February 16, 2018 14:50</p>
-                    <p>Неоценимая польза серфинга — искусство быть счастливым !</p>
-                    <p>#серфинг#счастье#2018#плавание#океан#ожидание#волны</p>
-                </div>
-                <button class="button" style="top: 50px; left: 40px;">Like 54</button>
-                <button class="button" style="top: 50px; left: 50%">Удалить</button>
-                <div class="border"></div>
-            </div>
-
-            <div class="Post">
-                <div class="editButton">
-                    <button > <img src="assets/pencil-edit-button.png" height="32px" width="32px"/>  </button>
-                </div>
-                <img class="photoPost" src="assets/photo1.png" height="80%" width="60%"/>
-                <div class="description">
-                    <p>isysoi</p>
-                    <p>February 16, 2018 14:50</p>
-                    <p>Неоценимая польза серфинга — искусство быть счастливым !</p>
-                    <p>#серфинг#счастье#2018#плавание#океан#ожидание#волны</p>
-                </div>
-                <button class="button" style="top: 50px; left: 40px;">Like 54</button>
-                <button class="button" style="top: 50px; left: 50%">Удалить</button>
-                <div class="border"></div>
-            </div>
-
-            <div class="Post">
-                <div class="editButton">
-                    <button > <img src="assets/pencil-edit-button.png" height="32px" width="32px"/>  </button>
-                </div>
-                <img class="photoPost" src="assets/photo1.png" height="80%" width="60%"/>
-                <div class="description">
-                    <p>isysoi</p>
-                    <p>February 16, 2018 14:50</p>
-                    <p>Неоценимая польза серфинга — искусство быть счастливым !</p>
-                    <p>#серфинг#счастье#2018#плавание#океан#ожидание#волны</p>
-                </div>
-                <button class="button" style="top: 50px; left: 40px;">Like 54</button>
-                <button class="button" style="top: 50px; left: 50%">Удалить</button>
-                <div class="border"></div>
-            </div>
+        </div>
+    </div>
 
 
-
-
-            <div style="padding-bottom: 50px; padding-top: 50px;">
-                <button class="button" style="left: 45%">Загрузить еще</button>
-            </div>
-
-
+    <div class="content">
+        <div class="Post"></div>
+        <div style="padding-bottom: 50px; padding-top: 50px;">
+            <button class="button" style="left: 45%">Загрузить еще</button>
         </div>
 
-        <footer>
-            <div class="info">
-                <h2 class="infoFont">
-                    <span>PhotoBoom</span>
-                </h2>
+    </div>
 
-                <p class="logoFont">
+
+    <footer>
+        <div class="info">
+            <h2 class="infoFont">
+                <span>PhotoBoom</span>
+            </h2>
+
+            <p class="logoFont">
                     <span>
                         Илья Сысой
                     </span>
-                </p>
+            </p>
 
-                <p class="logoFont">
+            <p class="logoFont">
                     <span>
                         2 курс, 12 группа
                     </span>
-                </p>
+            </p>
 
-                <p class="logoFont">
+            <p class="logoFont">
                     <span>
                        14_ilya@mil.ru
                     </span>
-                </p>
+            </p>
 
-                <p class="logoFont">
+            <p class="logoFont">
                     <span>
                         26.02.2018
                     </span>
-                </p>
+            </p>
 
-            </div>
-        </footer>
+        </div>
+    </footer>
 
+</div>
+
+
+<template id="post-template">
+    <div class="Post">
+        <div class="edit-button"></div>
+        <img class="photoPost" id="photo" src="assets/photo1.png" height="80%" width="60%"/>
+        <div class="description_post">
+            <p id="author"></p>
+            <p class="date"></p>
+            <p id="description"></p>
+        </div>
+        <button class="button" style="top: 50px; left: 40px;">Like 54</button>
+        <div class="delete-button"></div>
+        <div class="border"></div>
     </div>
+</template>
+
+
+<template id="delete-buttons-template">
+    <button class="button" class="delete-buttons" style="top: 5px; left: 70%">Удалить</button>
+</template>
+
+<template id="edit-buttons-template">
+    <button class="edit-buttons"><img src="assets/pencil-edit-button.png" height=32 width=32></button>
+</template>
+
+<template id="user-logged-in">
+    <p class="username"></p>
+    <img class="userPhoto" src="assets/profileImage.png" height="81" width="81"/>
+    <button class="button" style="left: -40px; top: -30px">
+        Выйти
+    </button>
+</template>
+
+<template id="user-logged-out">
+    <button class="button" style="left: -40px; top: 8vh">
+        Вход
+    </button>
+</template>
+
+
+<script src="DOM.js"></script>
+
 </body>
 </html>
