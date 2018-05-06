@@ -5,62 +5,31 @@
     <title>PhotoBoom</title>
     <link rel="stylesheet" href="styles.css">
     <script src="javascript.js"></script>
-<body>
 </head>
-<div class="site_background">
-
+<body bgcolor="#ABB59E">
     <header>
         <div class="logo">
             <h2 class="infoFont">
                 PhotoBoom
             </h2>
-            <button class="button" style="top: 10px">
+            <button class="button" onclick="screenChangeModule.loadEditScreen();" style="top: 10px">
                 Добавить фото
             </button>
         </div>
 
         <div class="user"></div>
     </header>
-
-    <div class="filter">
-        <button class="button" style="left: 76%; position: absolute">
-            Поиск
-        </button>
-        <div class="showhim">
-            <button class="button" style="left: 76%;top: 30%; position: absolute">
-                Фильтры
-            </button>
-            <div class="showme" style="left: 84%;top: 30%; position: absolute">
-                <dl>
-                    <dt>
-                        <button class="button">
-                            Тег2
-                        </button>
-                    </dt>
-                    <dt>
-                        <button class="button">
-                            Тег1
-                        </button>
-                    </dt>
-                    <dt>
-                        <button class="button">
-                            Тег3
-                        </button>
-                    </dt>
-                    <!-- добавьте пункты сюда -->
-                </dl>
-            </div>
-        </div>
-    </div>
-
-
     <div class="content">
-        <div class="Post"></div>
-        <div style="padding-bottom: 50px; padding-top: 50px;">
-            <button class="button" style="left: 45%">Загрузить еще</button>
-        </div>
+    </div>
+
+<template id="mainScreen-template">
+    <div class="posts">
 
     </div>
+
+        <div style="padding-bottom: 50px; padding-top: 50px;">
+            <button class="button" onclick="DOMModule.showMore();" style="left: 45%">Загрузить еще</button>
+        </div>
 
 
     <footer>
@@ -95,8 +64,58 @@
 
         </div>
     </footer>
+</template>
 
-</div>
+<template id="loginScreen-template">
+    <div class="Post">
+        login:
+        <input type="text" id="login">
+        password:
+        <input type="text" id="password">
+        <button class="button" onclick="DOMModule.login();" style="top: 50px; left: 40px;">Submit</button>
+    </div>
+</template>
+
+<template id="editScreen-template">
+    <table width="100%">
+        <tr>
+            <td height="50"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td width="550">
+                <div class="post">
+                <table width="100%">
+                <tr>
+                    <td>
+                        <p id="author"></p>
+                        <p class="date"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="400">
+                        <input type="file" id="file">
+                        <img src="" width="400" id="photo">
+                    </td>
+                    <td valign="top">
+                        Description:
+                        <textarea id="description" rows="13"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <input type="button" onclick="DOMModule.onSaveClick()" value="Save">        
+                    </td>
+                </tr>
+                </table>
+            <div class="info">
+            </div>
+        </div>
+            </td>
+            <td></td>
+        </tr>
+    </table>
+</template>
 
 
 <template id="post-template">
@@ -108,7 +127,7 @@
             <p class="date"></p>
             <p id="description"></p>
         </div>
-        <button class="button" style="top: 50px; left: 40px;">Like 54</button>
+        <button class="button" id="like" style="top: 50px; left: 40px;">Like</button>
         <div class="delete-button"></div>
         <div class="border"></div>
     </div>
@@ -126,19 +145,21 @@
 <template id="user-logged-in">
     <p class="username"></p>
     <img class="userPhoto" src="assets/profileImage.png" height="81" width="81"/>
-    <button class="button" style="left: -40px; top: -30px">
+    <button onclick="DOMModule.logout();" class="button" style="left: -40px; top: -30px">
         Выйти
     </button>
 </template>
 
 <template id="user-logged-out">
-    <button class="button" style="left: -40px; top: 8vh">
+    <button class="button" onclick="screenChangeModule.loadLoginScreen();" style="left: -40px; top: 8vh">
         Вход
     </button>
 </template>
 
 
+<script src="javascript.js"></script>
 <script src="DOM.js"></script>
+<script src="screenChange.js"></script>
 
 </body>
 </html>

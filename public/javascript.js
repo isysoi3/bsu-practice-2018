@@ -33,6 +33,19 @@ Date.prototype.yyyymmdd = function () {
         createPost(19, "Test post 20", new Date('February 17, 2018 17:24:00'), "Vasya", "assets/image1.jpg")
     ];
 
+    var users = [
+        createUser("1", "1"),
+        createUser("Yana", "Yana")
+    ];
+
+    function createUser(login, password)
+    {
+        return{
+            login : login,
+            password : password
+        }
+    }
+
     function createPost(id, description, createdAt, author, photoLink) {
         return {
             id: id,
@@ -40,14 +53,30 @@ Date.prototype.yyyymmdd = function () {
             createdAt: createdAt,
             author: author,
             photoLink: photoLink
-
         }
     }
 
     return {
+
+        login : function(login, password)
+        {
+            pos = users.find( function(User){
+                return User.login === login && User.password === password;
+            });
+            if( pos !== undefined)
+                return true;
+            return false;
+        },
+
+        createPost : function(id, description, createdAt, author, photoLink){
+            return createPost(id, description, createdAt, author, photoLink);
+        },
+
         getPhotoPosts: function (skip, top, filterConfig) {
             if (filterConfig === undefined) {
-                return photoPosts.slice(skip, skip + top);
+                return photoPosts.sort(function (first, second) {
+                    return second.createdAt.getTime() - first.createdAt.getTime();
+                }).slice(skip, skip + top).reverse();
             }
             else {
                 if (filterConfig.author !== undefined

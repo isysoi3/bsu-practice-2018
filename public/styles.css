@@ -65,7 +65,6 @@ footer {
 }
 
 .button {
-    background-color: #9EAB8F;
     position: relative;
     height: 5vh;
     box-shadow: 2px 2px #888888;
@@ -76,6 +75,12 @@ footer {
 
 .button:hover {
     background: #91D3F8;
+}
+
+
+
+#pressed_like {
+    background-color: #FF7777;
 }
 
 .user {
