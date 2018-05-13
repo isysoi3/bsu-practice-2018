@@ -1,4 +1,4 @@
-;var DOMModule = (function () {
+var DOMModule = (function () {
     var user = "isysoi" ;
     var posts;
     var postTemplate;
@@ -17,14 +17,14 @@
 
         init : function()
         {
-            posts = document.querySelector('div[class="posts"]');
-            postTemplate = document.getElementById('post-template');
-            deleteButtons = document.getElementById('delete-buttons-template');
-            editButtons = document.getElementById('edit-buttons-template');
+            posts = document.querySelector("div[class=\"posts\"]");
+            postTemplate = document.getElementById("post-template");
+            deleteButtons = document.getElementById("delete-buttons-template");
+            editButtons = document.getElementById("edit-buttons-template");
 
-            headerButtons = document.querySelector('div[class="user"]');
-            userLoggedIn = document.getElementById('user-logged-in');
-            userLoggedOut = document.getElementById('user-logged-out');
+            headerButtons = document.querySelector("div[class=\"ser\"]");
+            userLoggedIn = document.getElementById("user-logged-in");
+            userLoggedOut = document.getElementById("user-logged-out");
 
 
             DOMModule.showUserElements();
@@ -37,17 +37,17 @@
 
             let newPost = document.importNode(postTemplate.content, true);
 
-            newPost.querySelector('div[class="Post"]').id = photoPost.id;
-            newPost.getElementById('description').textContent = photoPost.description;
-            newPost.getElementById('photo').src = photoPost.photoLink;
-            newPost.getElementById('author').textContent = photoPost.author;
+            newPost.querySelector("div[class=\"Post\"]").id = photoPost.id;
+            newPost.getElementById("description").textContent = photoPost.description;
+            newPost.getElementById("photo").src = photoPost.photoLink;
+            newPost.getElementById("author").textContent = photoPost.author;
 
             let options = {
                 day: "numeric", month: "short", year: "numeric",
                 hour: "2-digit", minute: "2-digit"
             };
 
-            var like = newPost.getElementById('like');
+            var like = newPost.getElementById("like");
 
             like.onclick = function(){
                 if(like.id === "like")
@@ -58,20 +58,20 @@
                     like.id = "like";
             };               
 
-            newPost.querySelector('p[class="date"]').textContent = photoPost.createdAt.toLocaleTimeString("en-us", options);
+            newPost.querySelector("p[class=\"date\"]").textContent = photoPost.createdAt.toLocaleTimeString("en-us", options);
 
             if (user === photoPost.author) {
-                let deleteButton = newPost.querySelector('div[class="delete-button"]');
+                let deleteButton = newPost.querySelector("div[class=\"delete-button\"]");
                 deleteButton.onclick = function(){
                     DOMModule.removePhotoPost(photoPost.id);
                     DOMModule.showPosts();
-                }
-                deleteButton.insertBefore(document.importNode(deleteButtons.content, true), deleteButton.querySelector('div[class="delete-buttons"]'));
-                let editButton = newPost.querySelector('div[class="edit-button"]');
+                };
+                deleteButton.insertBefore(document.importNode(deleteButtons.content, true), deleteButton.querySelector("div[class=\"delete-buttons\"]"));
+                let editButton = newPost.querySelector("div[class=\"edit-button\"]");
                 editButton.onclick = function(){
                     screenChangeModule.loadEditScreen(photoPost.id);
-                }
-                editButton.insertBefore(document.importNode(editButtons.content, true), editButton.querySelector('div[class="delete-buttons"]'));
+                };
+                editButton.insertBefore(document.importNode(editButtons.content, true), editButton.querySelector("div[class=\"delete-buttons\"]"));
             }
 
             posts.insertBefore(newPost, posts.firstChild);
@@ -87,24 +87,24 @@
                 editingPost = new photoPostsModule.createPost(-1, "", new Date() , user, "");
             else
                 editingPost = photoPost;
-            document.getElementById('author').textContent = user;
-            document.querySelector('p[class="date"]').textContent = (editingPost.createdAt.toLocaleTimeString("en-us", options));
-            document.getElementById('photo').src = editingPost.photoLink;
-            document.getElementById('description').textContent = editingPost.description;
+            document.getElementById("author").textContent = user;
+            document.querySelector("p[class=\"date\"]").textContent = (editingPost.createdAt.toLocaleTimeString("en-us", options));
+            document.getElementById("photo").src = editingPost.photoLink;
+            document.getElementById("description").textContent = editingPost.description;
 
-            document.getElementById('file').onchange = function(){
-                    editingPost.photoLink = window.URL.createObjectURL(document.getElementById('file').files[0]);
-                    document.getElementById('photo').src = editingPost.photoLink;
-                };
+            document.getElementById("file").onchange = function(){
+                editingPost.photoLink = window.URL.createObjectURL(document.getElementById("file").files[0]);
+                document.getElementById("photo").src = editingPost.photoLink;
+            };
         },
 
         onSaveClick : function(){
-                editingPost.description = document.getElementById('description').value;
-                if(photoPostsModule.getPhotoPost(editingPost.id) !== null)
-                    photoPostsModule.editPhotoPost(editingPost.id, editingPost);
-                else
-                    photoPostsModule.addPhotoPost(editingPost);
-                screenChangeModule.loadMainScreen();
+            editingPost.description = document.getElementById("description").value;
+            if(photoPostsModule.getPhotoPost(editingPost.id) !== null)
+                photoPostsModule.editPhotoPost(editingPost.id, editingPost);
+            else
+                photoPostsModule.addPhotoPost(editingPost);
+            screenChangeModule.loadMainScreen();
         },
 
         showPosts: function () {
@@ -127,8 +127,8 @@
 
         login : function()
         {
-            var loginTextBox =  document.getElementById('login');
-            var paswwordTextBox =  document.getElementById('password');
+            var loginTextBox =  document.getElementById("login");
+            var paswwordTextBox =  document.getElementById("password");
             if(photoPostsModule.login(loginTextBox.value, paswwordTextBox.value))
             {
                 user = loginTextBox.value;
@@ -144,10 +144,10 @@
             let post = document.querySelector(`div[id ="${id}"]`);
             if (document.getElementById(id) != null) {
                 if (photoPost.description !== undefined) {
-                    post.querySelector('p[id="description"]').textContent = photoPost.description;
+                    post.querySelector("p[id=\"description\"]").textContent = photoPost.description;
                 }
                 if (photoPost.photoLink !== undefined) {
-                    post.querySelector('img[id="photo"]').src = photoPost.photoLink;
+                    post.querySelector("img[id=\"photo\"]").src = photoPost.photoLink;
                 }
             }
         },
@@ -171,7 +171,7 @@
                 userInfoHeader = document.importNode(userLoggedOut.content, true);
             } else {
                 userInfoHeader = document.importNode(userLoggedIn.content, true);
-                userInfoHeader.querySelector('p[class="username"]').textContent = user;
+                userInfoHeader.querySelector("p[class=\"username\"]").textContent = user;
             }
             headerButtons.appendChild(userInfoHeader);
         },
@@ -182,5 +182,5 @@
             DOMModule.showUserElements();
             DOMModule.showPosts();
         }
-    }
+    };
 })();
