@@ -13,14 +13,14 @@ function compareByDate(photoPostA, photoPostB) {
     return new Date(photoPostB.createdAt) - new Date(photoPostA.createdAt);
 }
 
-function getPhotoPosts(skip, top) {
+function getPhotoPosts() {
     let posts = JSON.parse(fs.readFileSync("./data/posts.json"));
 
     posts.sort(compareByDate);
     posts = posts.slice(last, last  + photoPhostsOffset);
     last += photoPhostsOffset; 
     return posts;
-};
+}
 
 function getPhotoPost(id) {
     let jsonPosts = fs.readFileSync("./data/posts.json");
@@ -65,7 +65,7 @@ function validatePhotoPost(photoPost, flag) {
     }
 
     return true;
-};
+}
 
 function addPhotoPost(photoPost) {
     let posts = JSON.parse(fs.readFileSync("./data/posts.json"));
@@ -77,7 +77,7 @@ function addPhotoPost(photoPost) {
         return true;
     }
     return false;
-};
+}
 
 function editPhotoPost(id, photoPost) {
 
@@ -111,7 +111,7 @@ function editPhotoPost(id, photoPost) {
     posts[posts.findIndex(item => item.id === id)] = clone;
     fs.writeFileSync("./data/posts.json", JSON.stringify(posts));
     return true;
-};
+}
 
 function removePhotoPost(id) {
     let posts = JSON.parse(fs.readFileSync("./data/posts.json"));
@@ -142,26 +142,26 @@ app.get("/getPhotoPosts", function (req, res) {
     else {
         res.send(404, "Errqor!!!");
     }
-})
+});
 
 
 app.post("/addPhotoPost", function (req, res) {
     if (addPhotoPost(req.body)) {
-        res.send(200, `Photopost was added`);
+        res.send(200, "Photopost was added");
     }
     else {
-        res.send(404, `Error!!!`);
+        res.send(404, "Error!");
     }
-})
+});
 
 app.put("/editPhotoPost/:id", function (req, res) {
     if (editPhotoPost(req.params.id, req.body)) {
         res.send(200, `Photopost with id = ${req.params.id} was edited`);
     }
     else {
-        res.send(404, "Error!!!");
+        res.send(404, "Error!");
     }
-})
+});
 
 app.delete("/removePhotoPost/:id", function (req, res) {
     if (removePhotoPost(req.params.id)) {
@@ -170,7 +170,7 @@ app.delete("/removePhotoPost/:id", function (req, res) {
     else {
         res.send(404, `Post with id = ${req.params.id} was not found`);
     }
-})
+});
 
 app.listen(3000, function () {
     console.log("Server is running...");
