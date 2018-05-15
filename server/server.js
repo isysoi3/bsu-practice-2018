@@ -30,7 +30,7 @@ function getPhotoPost(id) {
         }
         return value;
     });
-    return JSON.stringify(posts.find((post) => id === post.id));
+    return JSON.stringify(posts.find((post) => id === post.id), null, 4);
 }
 
 function validatePhotoPost(photoPost, flag) {
@@ -73,7 +73,7 @@ function addPhotoPost(photoPost) {
     if (validatePhotoPost(photoPost)) {
         posts.push(photoPost);
         posts.sort(compareByDate);
-        fs.writeFileSync("./data/posts.json", JSON.stringify(posts));
+        fs.writeFileSync("./data/posts.json", JSON.stringify(posts, null, 4));
         return true;
     }
     return false;
@@ -109,7 +109,7 @@ function editPhotoPost(id, photoPost) {
     }
 
     posts[posts.findIndex(item => item.id === id)] = clone;
-    fs.writeFileSync("./data/posts.json", JSON.stringify(posts));
+    fs.writeFileSync("./data/posts.json", JSON.stringify(posts, null, 4));
     return true;
 }
 
@@ -118,7 +118,7 @@ function removePhotoPost(id) {
     let index = posts.findIndex(item => item.id === id);
     if (index !== -1) {
         posts.splice(index, 1);
-        fs.writeFileSync("./data/posts.json", JSON.stringify(posts));
+        fs.writeFileSync("./data/posts.json", JSON.stringify(posts, null, 4));
         return true;
     }
     return false;
