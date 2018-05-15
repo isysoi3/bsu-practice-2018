@@ -130,7 +130,7 @@ app.get("/getPhotoPost/:id", function (req, res) {
         res.status(200).send(post);
     }
     else {
-        res.send(404, `Photopost ${req.params.id} not found!!!`);
+        res.status(404).send("Photopost ${req.params.id} not found!!!")
     }
 });
 
@@ -140,35 +140,35 @@ app.get("/getPhotoPosts", function (req, res) {
         res.status(200).send(answer);
     }
     else {
-        res.send(404, "Errqor!!!");
+        res.status(404).send("Error!");
     }
 });
 
 
 app.post("/addPhotoPost", function (req, res) {
     if (addPhotoPost(req.body)) {
-        res.send(200, "Photopost was added");
+        res.status(200).send("Photopost was added");
     }
     else {
-        res.send(404, "Error!");
+        res.status(404).send("Error!");
     }
 });
 
 app.put("/editPhotoPost/:id", function (req, res) {
     if (editPhotoPost(req.params.id, req.body)) {
-        res.send(200, `Photopost with id = ${req.params.id} was edited`);
+        res.status(200).send("Photopost with id = ${req.params.id} was edited");
     }
     else {
-        res.send(404, "Error!");
+        res.status(404).send("Error!");
     }
 });
 
 app.delete("/removePhotoPost/:id", function (req, res) {
     if (removePhotoPost(req.params.id)) {
-        res.send(200, `Post with id = ${req.params.id} was successfully deleted`);
+        res.status(200).send("Post with id = ${req.params.id} was successfully deleted");
     }
     else {
-        res.send(404, `Post with id = ${req.params.id} was not found`);
+        res.status(404).send("Post with id = ${req.params.id} was not found");
     }
 });
 
